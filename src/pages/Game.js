@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Loading from "../UIComponents/Loading"
+import { Navigate } from "react-router-dom";
 
 function Game() {
   const token = window.localStorage.getItem("token");
@@ -18,7 +20,7 @@ function Game() {
       .catch(
           err => console.log(err)
       );
-      setTopTracks(data.items);
+      if (data) setTopTracks(data.items);
     };
     GetTopTracks();
   }, [token]); // Get top tracks as soon as token is generated and assigned
@@ -31,8 +33,12 @@ function Game() {
     }
   }
 
+  if (token == null) {
+    return <Navigate to="/auth" />
+  }
+  
   if (topTracks.length < 1) {
-    return <h1>Hold up.</h1>
+    return <Loading />
   }
   else return (
     <div>

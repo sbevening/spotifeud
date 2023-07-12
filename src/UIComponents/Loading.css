@@ -1,0 +1,42 @@
+.loading-circle {
+  margin: 0;
+  position: absolute;
+  border: 1em solid grey;
+  border-top: 1em solid #3C7A89;
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+  animation: spin 2s linear infinite;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  margin: 0;
+}
+
+.loading {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 10em;
+    height: 10em;
+    margin: 0;
+}
+
+.loading-text {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin: 0;
+    font-size: x-large;
+    transform: translate(-30%, -20%);
+    color: gray;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
