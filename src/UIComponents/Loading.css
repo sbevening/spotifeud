@@ -1,8 +1,8 @@
 .loading-circle {
   margin: 0;
   position: absolute;
-  border: 1em solid grey;
-  border-top: 1em solid #3C7A89;
+  border: 1em solid black;
+  border-top: 1em solid #1bca5a;
   border-radius: 50%;
   width: 10em;
   height: 10em;
@@ -29,7 +29,7 @@
     margin: 0;
     font-size: x-large;
     transform: translate(-30%, -20%);
-    color: gray;
+    color: #1bca5a;
 }
 
 @keyframes spin {
